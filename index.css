@@ -1,0 +1,21 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    padding: 20px;
+}
+
+nav a {
+    margin-right: 15px;
+}
+
+section {
+    padding: 30px;
+}
+
+footer {
+    padding: 20px;
+}
