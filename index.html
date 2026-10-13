@@ -10,54 +10,122 @@
 <body>
 
     <header>
-        <h1>Лапа помощи</h1>
+        <div class="logo">🐾 Лапа помощи</div>
 
         <nav>
             <a href="#home">Главная</a>
             <a href="#about">О нас</a>
-            <a href="#help">Помощь</a>
+            <a href="#help">Как помочь</a>
             <a href="#contacts">Контакты</a>
         </nav>
     </header>
 
     <main>
-        <section id="home">
-            <h2>Поможем животным вместе!</h2>
-            <p>
-                Каждый питомец заслуживает
-                любви, заботы и своего дома.
-            </p>
-            <button>Помочь животным</button>
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <h1>Подари животным шанс на счастливую жизнь</h1>
+
+                <p>
+                    Ты можешь изменить чью-то жизнь.
+                    Помоги бездомным животным обрести
+                    заботу, любовь и новый дом.
+                </p>
+
+                <a href="#help" class="btn">
+                    Помочь сейчас
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=900"
+                    alt="Собака">
+            </div>
         </section>
 
-        <section id="about">
+        <section id="about" class="about">
             <h2>О нашем проекте</h2>
-            <p>
-                Мы помогаем бездомным животным
-                найти новый дом и заботливых хозяев.
+
+            <p class="section-text">
+                Лапа помощи — это проект, созданный
+                для поддержки бездомных животных.
+                Мы верим, что каждый питомец
+                заслуживает любящую семью.
             </p>
+
+            <div class="advantages">
+                <div class="advantage">
+                    <h3>❤️ Забота</h3>
+                    <p>
+                        Помогаем животным получать
+                        необходимую поддержку.
+                    </p>
+                </div>
+
+                <div class="advantage">
+                    <h3>🏠 Новый дом</h3>
+                    <p>
+                        Помогаем питомцам находить
+                        заботливых хозяев.
+                    </p>
+                </div>
+
+                <div class="advantage">
+                    <h3>🤝 Вместе</h3>
+                    <p>
+                        Объединяем людей, которые
+                        хотят помогать животным.
+                    </p>
+                </div>
+            </div>
         </section>
 
-        <section id="help">
-            <h2>Как можно помочь?</h2>
+        <section id="help" class="help">
+            <h2>Как ты можешь помочь?</h2>
 
-            <ul>
-                <li>Сделать пожертвование</li>
-                <li>Забрать животное домой</li>
-                <li>Стать волонтёром</li>
-                <li>Помочь кормом и вещами</li>
-            </ul>
+            <div class="help-cards">
+                <div class="card">
+                    <div class="card-icon">💚</div>
+                    <h3>Пожертвование</h3>
+                    <p>
+                        Поддержи животных финансово.
+                        Даже небольшая помощь важна.
+                    </p>
+                    <a href="#contacts">Подробнее →</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🐶</div>
+                    <h3>Забрать питомца</h3>
+                    <p>
+                        Подари животному семью,
+                        заботу и уютный дом.
+                    </p>
+                    <a href="#contacts">Подробнее →</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🙌</div>
+                    <h3>Волонтёрство</h3>
+                    <p>
+                        Помогай животным своим
+                        временем и добрыми делами.
+                    </p>
+                    <a href="#contacts">Подробнее →</a>
+                </div>
+            </div>
         </section>
 
-        <section id="contacts">
-            <h2>Контакты</h2>
-            <p>Город: Алматы</p>
+        <section id="contacts" class="contacts">
+            <h2>Свяжись с нами</h2>
+            <p>Город: Алматы, Казахстан</p>
             <p>Email: example@mail.com</p>
         </section>
     </main>
 
     <footer>
-        <p>Лапа помощи © 2026</p>
+        <p>🐾 Лапа помощи © 2026</p>
+        <p>Вместе мы можем больше!</p>
     </footer>
 
     <script src="index.js"></script>

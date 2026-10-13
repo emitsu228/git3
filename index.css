@@ -1,21 +1,253 @@
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8faf7;
+    color: #25352b;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Шапка сайта */
+
 header {
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: white;
+    box-shadow: 0 2px 10px #00000010;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #288a57;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
 }
 
 nav a {
-    margin-right: 15px;
+    text-decoration: none;
+    color: #25352b;
+    font-weight: bold;
 }
 
-section {
-    padding: 30px;
+nav a:hover {
+    color: #288a57;
 }
+
+/* Главный экран */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 80px 8%;
+    background-color: #eaf5eb;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #607066;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #288a57;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #1b633e;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    width: 45%;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #00000020;
+}
+
+/* О проекте */
+
+.about {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.section-text {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    color: #607066;
+}
+
+.advantages {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.advantage {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 30%;
+    box-shadow: 0 5px 20px #0000000a;
+}
+
+.advantage h3 {
+    color: #288a57;
+}
+
+.advantage p {
+    line-height: 1.6;
+    color: #607066;
+}
+
+/* Способы помощи */
+
+.help {
+    padding: 80px 8%;
+    background-color: #f0f6f0;
+    text-align: center;
+}
+
+.help-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    width: 30%;
+    padding: 35px 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #0000000a;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px #00000018;
+}
+
+.card-icon {
+    font-size: 42px;
+}
+
+.card h3 {
+    font-size: 22px;
+}
+
+.card p {
+    color: #607066;
+    line-height: 1.7;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #288a57;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Контакты */
+
+.contacts {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.contacts p {
+    color: #607066;
+}
+
+/* Подвал */
 
 footer {
-    padding: 20px;
+    background-color: #203c2c;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Адаптация под телефон */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 50px 8%;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .advantages,
+    .help-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advantage,
+    .card {
+        width: 85%;
+    }
 }
