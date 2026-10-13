@@ -9,20 +9,31 @@
 </head>
 <body>
 
-    <header>
-        <div class="logo">🐾 Лапа помощи</div>
+    
+<header>
+    <a href="#home" class="logo">🐾 Лапа помощи</a>
 
-        
-        <nav>
-            <a href="#home">Главная</a>
-            <a href="#about">О нас</a>
-            <a href="#animals">Наши питомцы</a>
-            <a href="#help">Как помочь</a>
-            <a href="#contacts">Контакты</a>
-            <a href="#donation">Пожертвовать</a>
-        </nav>
+    <button
+        id="menuToggle"
+        class="menu-toggle"
+        type="button"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        aria-controls="mainNav"
+    >
+        ☰
+    </button>
 
-    </header>
+    <nav id="mainNav">
+        <a href="#home">Главная</a>
+        <a href="#about">О нас</a>
+        <a href="#animals">Наши питомцы</a>
+        <a href="#help">Как помочь</a>
+        <a href="#donation">Пожертвовать</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+</header>
+
 
     <main>
         <section id="home" class="hero">
@@ -372,6 +383,10 @@
         <p>🐾 Лапа помощи © 2026</p>
         <p>Вместе мы можем больше!</p>
     </footer>
+
+<button id="scrollTopBtn" title="Наверх" aria-label="Вернуться наверх">
+    ↑
+</button>
 
     <script src="index.js"></script>
 </body>

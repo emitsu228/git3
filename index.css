@@ -560,3 +560,194 @@ footer {
         padding: 50px 6%;
     }
 }
+
+/* Финальные улучшения */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+nav a {
+    white-space: nowrap;
+}
+
+/* Мобильное меню */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #288a57;
+    cursor: pointer;
+}
+
+/* Кнопка наверх */
+
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: #288a57;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 200;
+    box-shadow: 0 5px 20px #00000030;
+    transition: 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background-color: #1b633e;
+    transform: translateY(-5px);
+}
+
+/* Анимация появления блоков */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s, transform 0.7s;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Улучшение кнопок */
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #f3aa52;
+    outline-offset: 3px;
+}
+
+/* Мобильная версия */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 15px 5%;
+        gap: 0;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding-top: 15px;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        padding: 13px 5px;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-image img {
+        border-radius: 15px;
+    }
+
+    .animal-cards {
+        gap: 20px;
+    }
+
+    .animal-card {
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    .amount-buttons {
+        justify-content: center;
+    }
+
+    .modal-content {
+        box-sizing: border-box;
+        padding: 25px;
+    }
+}
+
+/* Для маленьких телефонов */
+
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    .amount-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .donation-form {
+        padding: 20px;
+    }
+}
+
+/* Отключение анимаций по настройке пользователя */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
