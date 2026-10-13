@@ -64,3 +64,79 @@ function showAnimals() {
         noResults.style.display = "none";
     }
 }
+
+// Выбранная сумма пожертвования
+let selectedAmount = 0;
+
+// Выбор суммы кнопкой
+function selectAmount(amount, button) {
+    selectedAmount = amount;
+
+    let buttons = document.querySelectorAll(".amount-btn");
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("selected");
+    }
+
+    button.classList.add("selected");
+
+    document.getElementById("customAmount").value = "";
+}
+
+// Ввод своей суммы
+let customAmount = document.getElementById("customAmount");
+
+customAmount.addEventListener("input", function() {
+    selectedAmount = 0;
+
+    let buttons = document.querySelectorAll(".amount-btn");
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("selected");
+    }
+});
+
+// Отправка формы
+let donationForm = document.getElementById("donationForm");
+
+donationForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("donorName").value.trim();
+    let email = document.getElementById("donorEmail").value.trim();
+    let amountInput = customAmount.value.trim();
+    let amount = selectedAmount;
+
+    if (amountInput !== "") {
+        amount = Number(amountInput);
+    }
+
+    let result = document.getElementById("donationResult");
+
+    if (!Number.isSafeInteger(amount) || amount <= 0) {
+        result.style.color = "red";
+        result.textContent = "Выберите корректную сумму пожертвования!";
+        return;
+    }
+
+    if (name === "" || email === "") {
+        result.style.color = "red";
+        result.textContent = "Заполните имя и email!";
+        return;
+    }
+
+    result.style.color = "#288a57";
+    result.textContent =
+        "Спасибо, " + name + "! Вы указали " +
+        amount.toLocaleString("ru-RU") +
+        " ₸. Это демонстрация, оплата не выполнена.";
+
+    donationForm.reset();
+    selectedAmount = 0;
+
+    let buttons = document.querySelectorAll(".amount-btn");
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("selected");
+    }
+});

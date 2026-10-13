@@ -19,6 +19,7 @@
             <a href="#animals">Наши питомцы</a>
             <a href="#help">Как помочь</a>
             <a href="#contacts">Контакты</a>
+            <a href="#donation">Пожертвовать</a>
         </nav>
 
     </header>
@@ -260,6 +261,105 @@
                 </div>
             </div>
         </section>
+        
+<section id="donation" class="donation">
+    <div class="donation-container">
+
+        <div class="donation-info">
+            <h2>Подари надежду 🐾</h2>
+
+            <p>
+                Даже небольшое пожертвование
+                может помочь животным получить
+                еду, лечение и заботу.
+            </p>
+
+            <h3>Ваша помощь — их счастливое будущее!</h3>
+
+            <div class="donation-benefits">
+                <p>🐶 Помощь бездомным собакам</p>
+                <p>🐱 Забота о бездомных кошках</p>
+                <p>❤️ Поддержка животных</p>
+            </div>
+        </div>
+
+        <div class="donation-form">
+            <h3>Сделать пожертвование</h3>
+
+            <form id="donationForm">
+
+                <label>Выберите сумму:</label>
+
+                <div class="amount-buttons">
+                    <button type="button" class="amount-btn"
+                        onclick="selectAmount(500, this)">
+                        500 ₸
+                    </button>
+
+                    <button type="button" class="amount-btn"
+                        onclick="selectAmount(1000, this)">
+                        1 000 ₸
+                    </button>
+
+                    <button type="button" class="amount-btn"
+                        onclick="selectAmount(2000, this)">
+                        2 000 ₸
+                    </button>
+
+                    <button type="button" class="amount-btn"
+                        onclick="selectAmount(5000, this)">
+                        5 000 ₸
+                    </button>
+                </div>
+
+                <label for="customAmount">Своя сумма (₸):</label>
+                <input
+                    type="number"
+                    id="customAmount"
+                    min="1"
+                    step="1"
+                    placeholder="Введите сумму"
+                >
+
+                <label for="donorName">Ваше имя:</label>
+                <input
+                    type="text"
+                    id="donorName"
+                    placeholder="Введите имя"
+                    required
+                >
+
+                <label for="donorEmail">Email:</label>
+                <input
+                    type="email"
+                    id="donorEmail"
+                    placeholder="Введите email"
+                    required
+                >
+
+                <label for="donorMessage">Сообщение (необязательно):</label>
+                <textarea
+                    id="donorMessage"
+                    placeholder="Напишите пожелание..."
+                    rows="3"
+                ></textarea>
+
+                <button type="submit" class="donate-btn">
+                    Подтвердить намерение помочь
+                </button>
+
+                <p class="donation-note">
+                    Демо-форма. Оплата не производится,
+                    данные не отправляются.
+                </p>
+
+                <p id="donationResult"></p>
+
+            </form>
+        </div>
+
+    </div>
+</section>
 
         <section id="contacts" class="contacts">
             <h2>Свяжись с нами</h2>
