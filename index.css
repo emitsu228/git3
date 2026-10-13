@@ -338,3 +338,58 @@ footer {
         padding: 50px 8%;
     }
 }
+
+/* Поиск и фильтры */
+
+.animal-filters {
+    margin: 30px auto 40px;
+    text-align: center;
+}
+
+#animal-search {
+    width: 80%;
+    max-width: 400px;
+    padding: 15px 20px;
+    border: 2px solid #d5e5d9;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 25px;
+}
+
+#animal-search:focus {
+    border-color: #288a57;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-btn {
+    padding: 12px 25px;
+    background-color: #eaf5eb;
+    color: #288a57;
+    border: 2px solid #288a57;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #d2ead8;
+}
+
+.filter-btn.active {
+    background-color: #288a57;
+    color: white;
+}
+
+#no-results {
+    margin-top: 30px;
+    color: #607066;
+    font-size: 20px;
+}

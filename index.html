@@ -91,10 +91,36 @@
         Возможно, именно здесь тебя ждёт
         твой будущий лучший друг!
     </p>
+    
+<div class="animal-filters">
+    <input
+        type="text"
+        id="animal-search"
+        placeholder="Поиск по кличке..."
+    >
 
-    <div class="animal-cards">
+    <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filterAnimals('all', this)">
+            Все животные
+        </button>
 
-        <div class="animal-card">
+        <button class="filter-btn" onclick="filterAnimals('dog', this)">
+            🐶 Собаки
+        </button>
+
+        <button class="filter-btn" onclick="filterAnimals('cat', this)">
+            🐱 Кошки
+        </button>
+    </div>
+</div>
+
+<p id="no-results" style="display: none;">
+    😿 Животные не найдены
+</p>
+
+    <div class="animal-cards" data-type="dog">
+
+        <div class="animal-card" data-type="dog">
             <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600"
                  alt="Собака Барсик">
 
@@ -111,7 +137,7 @@
             </div>
         </div>
 
-        <div class="animal-card">
+        <div class="animal-card" data-type="cat">
             <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600"
                  alt="Кот Рыжик">
 
@@ -128,7 +154,7 @@
             </div>
         </div>
 
-        <div class="animal-card">
+        <div class="animal-card" data-type="dog">
             <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600"
                  alt="Собака Бим">
 
@@ -145,7 +171,7 @@
             </div>
         </div>
 
-        <div class="animal-card">
+        <div class="animal-card" data-type="cat">
             <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600"
                  alt="Кошка Мурка">
 
@@ -162,7 +188,7 @@
             </div>
         </div>
 
-        <div class="animal-card">
+        <div class="animal-card" data-type="dog">
             <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600"
                  alt="Собака Рекс">
 
@@ -179,7 +205,7 @@
             </div>
         </div>
 
-        <div class="animal-card">
+        <div class="animal-card" data-type="cat">
             <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=600"
                  alt="Кошка Луна">
 
